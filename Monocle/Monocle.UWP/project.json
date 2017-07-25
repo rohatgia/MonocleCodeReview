@@ -1,0 +1,25 @@
+﻿{
+  "dependencies": {
+    "Autofac": "4.6.0",
+    "AWSSDK.CognitoIdentity": "3.3.2.13",
+    "AWSSDK.Core": "3.3.17.2",
+    "AWSSDK.S3": "3.3.8.2",
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
+    "Xamarin.Forms": "2.3.4.247",
+    "Xamarin.Tesseract": "0.3.2",
+    "XLabs.Forms": "2.0.5782",
+    "XLabs.IoC.Autofac": "2.0.5782",
+    "XLabs.Platform": "2.0.5782"
+  },
+  "frameworks": {
+    "uap10.0": {}
+  },
+  "runtimes": {
+    "win10-arm": {},
+    "win10-arm-aot": {},
+    "win10-x86": {},
+    "win10-x86-aot": {},
+    "win10-x64": {},
+    "win10-x64-aot": {}
+  }
+}

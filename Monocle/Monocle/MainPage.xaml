@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Monocle"
+             xmlns:common="clr-namespace:Monocle.Common"
+             xmlns:custom="clr-namespace:Monocle.CustomControls"
+             x:Class="Monocle.MainPage">
+
+    <!--
+    <ContentPage.Resources>
+        <common:BooleanToVisibilityConverter x:Key="boolean" />
+    </ContentPage.Resources>
+    -->
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <common:BooleanToGridLengthConverter x:Key="ExpandCol" />
+            <common:BooleanToGridLengthConverter2 x:Key="ContractCol" />
+            <!-- <common:BooleanToVisibilityConverter x:Key="boolean" /> -->
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+    <Grid>
+
+        <!-- ######################################################################## -->
+  
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="{Binding IsColumnVisible, Converter={StaticResource ExpandCol}}" />
+            <ColumnDefinition Width="{Binding MainViewAdjust, Converter={StaticResource ContractCol}}" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+          <ActivityIndicator x:Name="activityIndicator"></ActivityIndicator>
+
+            <!-- ######################################################################## -->
+
+        <StackLayout Orientation="Vertical">
+            <Button x:Name="Questions" Text="Email">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Email_Tapped" NumberOfTapsRequired="1" />
+                    </Button.GestureRecognizers>
+            </Button>
+            <Button x:Name="Comments" Text="Comments">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Comments_Tapped" NumberOfTapsRequired="1" />
+                    </Button.GestureRecognizers>
+                </Button>
+            <Button x:Name="Categories" Text="Categories">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Resumes_Tapped" NumberOfTapsRequired="1" />
+                    </Button.GestureRecognizers>
+                </Button>
+                <Button x:Name="Logout" Text="Logout">
+                </Button>
+        </StackLayout>
+
+        <!-- ######################################################################## -->
+
+        <ScrollView Grid.Column="1">
+            <ListView>
+                <Editor x:Name ="comments1" IsVisible="{Binding CommentsEnabled}" />
+                <Label x:Name ="Pane1Description" Text="{Binding Pane1Text}" />
+                <StackLayout IsVisible="{Binding SelectionEnabled}">
+                    <StackLayout Orientation="Vertical">
+                            <custom:BindableRadioGroup x:Name="MyRadiouGroup" 
+                                                    ItemsSource="{Binding Path=MyList.Values}" 
+                                                    SelectedIndex="{Binding SelectedIndex}" VerticalOptions="Start" />
+                        </StackLayout>
+                </StackLayout>
+            </ListView>
+        </ScrollView>
+
+        <!-- ######################################################################## -->
+
+        <ScrollView Grid.Column="2">
+                <ScrollView.GestureRecognizers>
+                    <PinchGestureRecognizer />
+                </ScrollView.GestureRecognizers>
+            <ListView>
+                <custom:ItemsView ItemsSource="{Binding PdfPages,Mode=TwoWay}">
+                    <custom:ItemsView.ItemTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding}" Margin="0 2" />
+                        </DataTemplate>
+                    </custom:ItemsView.ItemTemplate>
+                </custom:ItemsView>
+            </ListView>
+        </ScrollView>
+
+        <!-- ######################################################################## -->
+
+        <StackLayout Orientation="Vertical" Grid.Column="3">
+            <Button IsEnabled="{Binding CategorySelected}" Text="Yes">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LoadNext_Tapped" NumberOfTapsRequired="1" />
+                    </Button.GestureRecognizers>
+                </Button>
+            <Button IsEnabled="{Binding CategorySelected}" Text="No">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LoadNext_Tapped" NumberOfTapsRequired="1" />
+                    </Button.GestureRecognizers>
+                </Button>
+            <StackLayout>
+                <Label Text="{Binding Counter}" />
+            </StackLayout>
+        </StackLayout>
+
+    </Grid>
+    </ContentPage.Content>
+</ContentPage>
