@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Monocle.Pages.Login">
+    <ContentPage.Content>
+    <StackLayout Spacing="0">
+            <StackLayout IsVisible="{Binding IsBusy}" HorizontalOptions="CenterAndExpand">
+                <ActivityIndicator IsRunning="{Binding IsBusy}" VerticalOptions="Center" />
+                <Label Text="Loading..." VerticalOptions="Center" />
+            </StackLayout>
+        
+            <Image Source="GE.png" Aspect="AspectFit" />
+            <Button x:Name="Questions" Text="SSO">
+                <Button.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="SSO_Tapped" NumberOfTapsRequired="1" />
+                </Button.GestureRecognizers>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

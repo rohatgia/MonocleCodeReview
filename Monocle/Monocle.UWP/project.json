@@ -1,15 +1,10 @@
 ﻿{
   "dependencies": {
-    "Autofac": "4.6.0",
-    "AWSSDK.CognitoIdentity": "3.3.2.13",
-    "AWSSDK.Core": "3.3.17.2",
-    "AWSSDK.S3": "3.3.8.2",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.3.3",
     "Xamarin.Forms": "2.3.4.247",
-    "Xamarin.Tesseract": "0.3.2",
-    "XLabs.Forms": "2.0.5782",
-    "XLabs.IoC.Autofac": "2.0.5782",
-    "XLabs.Platform": "2.0.5782"
+    "xunit": "2.2.0",
+    "xunit.runner.console": "2.2.0",
+    "xunit.runner.devices": "2.2.0"
   },
   "frameworks": {
     "uap10.0": {}
