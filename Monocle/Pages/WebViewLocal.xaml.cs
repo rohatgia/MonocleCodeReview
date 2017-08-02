@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Monocle.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class WebView : ContentPage
+    public partial class WebViewLocal : ContentPage
     {
-        public WebView(string URL)
+        public WebViewLocal(string URL)
         {
             InitializeComponent();
             webView.Source = URL;

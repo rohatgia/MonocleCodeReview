@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26510.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monocle.Android", "Monocle\Monocle.Android\Monocle.Android.csproj", "{82F21B93-15FF-4ABC-A686-D931F5B16511}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monocle.Android", "Monocle.Android\Monocle.Android.csproj", "{82F21B93-15FF-4ABC-A686-D931F5B16511}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monocle", "Monocle\Monocle\Monocle.csproj", "{485078F5-8B26-4181-9223-B11B64BD7D07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monocle", "Monocle.csproj", "{485078F5-8B26-4181-9223-B11B64BD7D07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monocle.UWP", "Monocle\Monocle.UWP\Monocle.UWP.csproj", "{71959B92-3194-4935-8A5E-0ECF687FDFE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monocle.UWP", "Monocle.UWP\Monocle.UWP.csproj", "{71959B92-3194-4935-8A5E-0ECF687FDFE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monocle.iOS", "Monocle\Monocle.iOS\Monocle.iOS.csproj", "{868C0306-F7E4-4EFB-8A58-06599B39D654}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monocle.iOS", "Monocle.iOS\Monocle.iOS.csproj", "{868C0306-F7E4-4EFB-8A58-06599B39D654}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monocle.Core", "Monocle.Core\Monocle.Core.csproj", "{67F9D3A8-F71E-4428-913F-C37AE82CDB24}"
 EndProject
